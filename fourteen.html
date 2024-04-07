@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        .father {
+            background-color: rgb(28, 146, 230);
+            color: black;
+            height: 400px;
+            width: 300px;
+            text-align: center;
+            border-radius: 5px;
+            border: 3px solid salmon;
+        }
+        
+        .father input {
+            margin: 10px 5px;
+            font-size: 20px;
+            border-radius: 2px;
+            background-color: palegreen;
+            border: none;
+            outline: none;
+            padding: 7px 7px;
+        }
+        
+        .father button {
+            margin: 10px 5px;
+            font-size: 22px;
+            border-radius: 5px;
+            background-color: rgb(225, 225, 89);
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+            cursor: pointer;
+        }
+        
+        .dada {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dada">
+        <div class="father">
+            <h1> Mini Calculator</h1>
+            <input type="text" id="txt1" placeholder="Enter First Number"><br>
+            <input type="text" id="txt2" placeholder="Enter Second Number"><br>
+            <button onclick="Add()">Add</button>
+            <button onclick="Sub()">Sub</button>
+            <button onclick="Mul()">Mul</button>
+            <button onclick="Div()">Div</button>
+            <h1 id="result">Result:-</h1>
+        </div>
+    </div>
+
+
+
+    <script>
+        function Add() {
+            var a = parseInt(document.getElementById("txt1").value);
+            var b = parseInt(document.getElementById("txt2").value);
+            var c = a + b;
+            document.getElementById("result").innerHTML = "Sum = " + c;
+        }
+
+        function Sub() {
+            var a = parseInt(document.getElementById("txt1").value);
+            var b = parseInt(document.getElementById("txt2").value);
+            var c = a - b;
+            document.getElementById("result").innerHTML = "Subtraction = " + c;
+        }
+
+        function Mul() {
+            var a = parseInt(document.getElementById("txt1").value);
+            var b = parseInt(document.getElementById("txt2").value);
+            var c = a * b;
+            document.getElementById("result").innerHTML = "Multiplication = " + c;
+        }
+
+        function Div() {
+            var a = parseInt(document.getElementById("txt1").value);
+            var b = parseInt(document.getElementById("txt2").value);
+            var c = a / b;
+            document.getElementById("result").innerHTML = "Division = " + c;
+        }
+    </script>
+</body>
+
+</html>
